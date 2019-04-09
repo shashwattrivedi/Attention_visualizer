@@ -8,8 +8,8 @@ def display_attention(sentence,attention_weights,scale=0,offset=18,style=1):
 		raise Exception("Number of tokens "+ len(sentence) + " not equal to attention list length " + len(attention_weights))
 
 	for _ in attention_weights:
-	if _ >1.0 or _ < 0.0:
-		raise Exception("invalid value " + str(_) + "in attention_weights")
+		if _ >1.0 or _ < 0.0:
+			raise Exception("invalid value " + str(_) + "in attention_weights")
 
 	html_template = Template('''
 	<script src="https://d3js.org/d3.v4.min.js"></script>

@@ -5,8 +5,7 @@ import json
 def display_attention(sentence,attention_weights,scale=0,offset=18,style=1):
   
   if( len(sentence)!=len(attention_weights)):
-		raise Exception("Number of tokens "+ len(sentence) + " not equal to \
-			attention list length " + len(attention_weights))
+		raise Exception("Number of tokens "+ len(sentence) + " not equal to attention list length " + len(attention_weights))
 
 	for _ in attention_weights:
 		if _ >1.0 or _ < 0.0:
